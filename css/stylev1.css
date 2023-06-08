@@ -19,6 +19,9 @@ body {
 	background-color: var(--col2);
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
+section{
+	padding: 1rem;
+}
 
 a,
 address,
@@ -41,7 +44,7 @@ header>h1 {
 }
 
 #profil {
-	
+	border: 0.9rem solid var(--col3);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -49,10 +52,10 @@ header>h1 {
 }
 
 #profil>h2,
-#profil>h3,
+#profil h3,
 #profil address,
 #profil>a,
-#profil>p {
+#profil p {
 	color: var(--col1);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	margin: 0;
