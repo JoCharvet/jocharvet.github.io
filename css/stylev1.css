@@ -9,32 +9,37 @@
 * {
 	box-sizing: border-box;
 }
-
 html {
 	font-size: 62.5%;
 }
+
 
 body {
 	font-size: 1.6rem;
 	background-color: var(--col2);
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
-section{
+.vp {
+	margin: 1rem;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	color: var(--col2);
+	font-size: 1.5rem;
+}
+
+
+section {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95%;
+	border-radius: 1.3rem;
+	margin: 1rem;
 	padding: 1rem;
 }
 
-a,
-address,
-#profil>p {
-	font-size: 2rem;
-	padding: 1rem;
-}
-
-main h1 {
-	color: var(--col1);
-	padding: 1rem;
-	text-align: center;
-}
 
 header>h1 {
 	color: white;
@@ -43,13 +48,72 @@ header>h1 {
 	text-align: center;
 }
 
+
+a,
+address,
+#profil>p {
+	font-size: 2rem;
+	padding: 1rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main h1 {
+	color: var(--col1);
+	padding: 1rem;
+	text-align: center;
+}
+
+
 #profil {
 	border: 0.9rem solid var(--col3);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	
+} 
+
+
+
+article {
+	width: 100%;
 }
+
+#profil {
+	
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#pp {
+	background-size: cover;
+	width: 20rem;
+}
+
+#pp>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+
+#profil>h2,
+#profil>h3,
+#profil address,
+#profil>a,
+#profil>p {
+	color: var(--col1);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
+}
+
 
 #profil>h2,
 #profil h3,
@@ -63,26 +127,15 @@ header>h1 {
 	text-align: center;
 }
 
-#pp {
-	background-size: cover;
-	width: 20rem;
-}
-
-#pp>img {
-	width: 100%;
-	height: 100%;
-	border-radius: 3px;
-}
 
 #formations {
-
+	border: 0.9rem solid var(--col4);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-#formations article>h2 {
-	font-size: 2rem;
-}
+
+
 
 #formations>article {
 	border-bottom: 3px dotted var(--col4);
@@ -97,78 +150,14 @@ header>h1 {
 	border-bottom: none;
 }
 
-#formations article>h2 {
+#formations article>h2 ,#formations article>h3 {
 	color: var(--col1);
 	font-size: 2rem;
 }
 
-#formations article>h3 {
-	color: var(--col1);
-	font-size: 1.6rem;
-}
-
-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-section {
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 95%;
-	border-radius: 13px;
-	margin: 1rem;
-}
-
-article {
-	width: 100%;
-}
-
-#profil {
-	
-	
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#profil>h2,
-#profil>h3,
-#profil address,
-#profil>a,
-#profil>p {
-	color: var(--col1);
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	margin: 0;
-	padding: 1rem;
-	text-align: center;
-}
-
-#pp {
-	background-size: cover;
-	width: 20rem;
-}
-
-#pp>img {
-	width: 100%;
-	height: 100%;
-	border-radius: 3px;
-}
-
-#formations {
-	border: 0.9rem solid var(--col4);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-
 
 #experience {
-	
+	border: 0.9rem solid var(--col5);
 	color: var(--col1);
 	padding: 3rem;
 }
@@ -194,7 +183,7 @@ article {
 }
 
 #competence {
-
+	border: 0.9rem solid var(--col1);
 	padding: 3rem;
 }
 
@@ -212,15 +201,70 @@ article {
 	text-emphasis: bold;
 }
 
+
 footer {
 	text-align: center;
 	color: white;
 }
 button{
-	margin: 1rem;
-	padding: 0;
-	border: none;
-	background-color: transparent;
-	color: var(--col2);
-	font-size: 1.5rem;
+	
 }
+
+.appears{
+	display: none;
+}
+
+@keyframes turn {
+	0% {
+	  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+	}
+	50%{
+		transform: translateX() translateY() rotate(180deg);
+	}
+	100% {
+	  transform: translateX(-50%) translateY(-50%) rotate(360deg);
+	}
+}
+  
+
+.anime-border{
+	color: var(--col3);
+
+	font-weight: bold;
+	transform: translateX(0) translateY(0);
+}
+.anime-border:before,
+.anime-border:after{
+	content: '';
+	padding: .9em .4em;
+	position: absolute;
+	left: 50%;
+	width: 100%;
+	top: 50%;
+
+	border: 3px solid var(--col3);
+	transform: translateX(-50%) translateY(-50%) rotate(0deg);
+	animation: 4s infinite alternate ease-in-out turn;
+}
+.anime-border:before{
+	border-color: var(--col3) #b1c492 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	z-index: -1;
+	
+}
+.anime-border::after{
+
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) var(--col3) #b1c492;
+	box-shadow: 5px 5px 5px rgba(46, 46, 49, .8);
+
+}
+  
+
+
+
+ 
+  
+
+  
+
+
+ 
