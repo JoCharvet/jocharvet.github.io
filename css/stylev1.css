@@ -161,9 +161,12 @@ article {
 	color: var(--col1);
 	padding: 3rem;
 }
+#experience>article {
+	border-bottom: 3px dotted var(--col5);
+}
 
 #experience>article>p {
-	border-bottom: 3px dotted var(--col1);
+	
 	padding-bottom: 3rem;
 }
 
