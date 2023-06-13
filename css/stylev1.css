@@ -19,6 +19,25 @@ body {
 	background-color: var(--col2);
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.bordercol1{
+	border-color: var(--col1);
+}
+.bordercol2{
+	border-color: var(--col2);
+}
+.bordercol3{
+	border-color: var(--col3);
+}
+.bordercol4{
+	border-color: var(--col4);
+}
+.bordercol5{
+	border-color: var(--col5);
+}
+
+
+
 .vp {
 	margin: 1rem;
 	padding: 0;
@@ -37,7 +56,7 @@ section {
 	width: 95%;
 	border-radius: 1.3rem;
 	margin: 1rem;
-	padding: 1rem;
+	padding: 3rem;
 }
 
 
@@ -81,6 +100,7 @@ main h1 {
 
 article {
 	width: 100%;
+	
 }
 
 #profil {
@@ -89,6 +109,7 @@ article {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	grid-area: profil;
 }
 #pp {
 	background-size: cover;
@@ -133,20 +154,17 @@ article {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	
 }
-
-
 
 #formation>article {
-	border-bottom: 3px dotted var(--col4);
+	border-bottom: 0.5rem dotted var(--col4);
+	
+	
 }
 
-#formation>article>p {
-	font-size: 3rem;
-	text-emphasis: bold;
-}
 
-#formation>article:last-child {
+#formation>article:nth-child(4) {
 	border-bottom: none;
 }
 
@@ -160,9 +178,10 @@ article {
 	border: 0.9rem solid var(--col5);
 	color: var(--col1);
 	padding: 3rem;
+	
 }
 #experience>article {
-	border-bottom: 3px dotted var(--col5);
+	border-bottom: 0.5rem dotted var(--col5);
 }
 
 #experience>article>p {
@@ -181,21 +200,22 @@ article {
 	text-align: start;
 }
 
-#experience>article:last-child>p:last-child {
-	border-bottom: none;
+#experience>article:nth-child(4) {
+	border: none;
 }
 
 #competence {
 	border: 0.9rem solid var(--col1);
 	padding: 3rem;
+
 }
 
-#competence>article>p {
-	border-bottom: 3px dotted var(--col1);
+#competence>article {
+	border-bottom: 0.5rem dotted var(--col1);
 	padding-bottom: 3rem;
 }
 
-#competence>article:last-child>p:last-child {
+#competence> article:last-child {
 	border-bottom: none;
 }
 
@@ -214,21 +234,80 @@ footer {
 	display: none;
 	position: fixed;
 	bottom: 8rem;
-	right: 4rem;
+	right: 4.5rem;
 	scroll-behavior: smooth;
-	background-color: rgba(200, 200, 200, 0.5);
-	border: 7px solid var(--col2);
+	background-color: rgba(200, 200, 200, 0.4);
+	border: 0.7rem solid var(--col2);
 	border-radius: 30%;
 	text-decoration: none;
 	font-size: 3rem;
 	padding: 0.5rem;
 	font-weight: bold;
+	color: var(--col1);
 	
 }
 
 .appears{
 	display: none;
 }
+
+/* @media screen and (min-width: 600px){
+	
+
+	#competence, #competence p{
+		text-align: center;
+	}
+} */
+/* @media screen and (min-width: 900px) {
+	#profil{
+
+	}
+} */
+
+/* @media screen and (min-width: 900px){
+	main{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr ;
+		grid-template-rows:  2fr 2fr 3fr 3fr;
+		grid-template-areas:
+							'profil formation formation'	
+							'profil formation formation '
+							'competence experience experience'
+							'competence experience experience';
+		grid-gap: 2rem;
+		
+
+	}
+	#profil{
+		grid-area: profil;
+	}
+	#experience{
+		grid-area: experience;
+		
+	}
+	#competence{
+		grid-area: competence;
+	}
+	section{
+			height: 100%;
+	}
+	#competence>h1{
+		display: inline-block;
+		width: 100%;
+	}
+	#competence>article{
+		display: inline-block;
+		width: 100%;
+
+	}
+	#formation{
+		grid-area: formation;
+	}
+
+	#hidden {
+		right: 10rem;
+	}
+} */
 
 /* @keyframes turn {
 	0% {
