@@ -164,7 +164,7 @@ article {
 }
 
 
-#formation>article:nth-child(4) {
+#formation>article:nth-child(5) {
 	border-bottom: none;
 }
 
@@ -238,7 +238,7 @@ footer {
 	scroll-behavior: smooth;
 	background-color: rgba(200, 200, 200, 0.4);
 	border: 0.7rem solid var(--col2);
-	border-radius: 30%;
+	border-radius: 35%;
 	text-decoration: none;
 	font-size: 3rem;
 	padding: 0.5rem;
@@ -251,35 +251,45 @@ footer {
 	display: none;
 }
 
-/* @media screen and (min-width: 600px){
+@media screen and (min-width: 600px){
 	
 
 	#competence, #competence p{
 		text-align: center;
 	}
-} */
-/* @media screen and (min-width: 900px) {
+} 
+@media screen and (min-width: 900px) {
 	#profil{
-
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-} */
+} 
 
-/* @media screen and (min-width: 900px){
+ @media screen and (min-width: 900px){
+
+	header{
+		margin-bottom: 5rem;
+	}
 	main{
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr ;
-		grid-template-rows:  2fr 2fr 3fr 3fr;
+		grid-template-columns: 1fr 1fr 2fr ;
+		grid-template-rows:  2fr 2fr 2fr 2fr;
 		grid-template-areas:
-							'profil formation formation'	
-							'profil formation formation '
-							'competence experience experience'
-							'competence experience experience';
+							'profil experience experience'	
+							'profil experience experience'
+							'competence formation formation'
+							'competence formation formation';
 		grid-gap: 2rem;
-		
+		padding-left: 3rem;
+		/* display: flex;
+		flex-direction: row; */
 
 	}
 	#profil{
 		grid-area: profil;
+		padding-top: 10rem;
+		
 	}
 	#experience{
 		grid-area: experience;
@@ -287,9 +297,12 @@ footer {
 	}
 	#competence{
 		grid-area: competence;
+		
 	}
 	section{
-			height: 100%;
+			padding-top: auto;
+			padding-bottom: auto;
+			min-height: 100%;
 	}
 	#competence>h1{
 		display: inline-block;
@@ -302,12 +315,19 @@ footer {
 	}
 	#formation{
 		grid-area: formation;
+		padding-top: 7rem;
 	}
 
 	#hidden {
 		right: 10rem;
 	}
-} */
+	.appears{
+		display: block;
+	}
+	.vp{
+		display: none;
+	}
+}
 
 /* @keyframes turn {
 	0% {
