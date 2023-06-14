@@ -16,8 +16,12 @@ html {
 
 body {
 	font-size: 1.6rem;
-	background-color: var(--col2);
+	background: linear-gradient(to bottom  right,var(--col1),var(--col2) ) ;
+	background-size: stretch;
+	background-repeat:space;
 	font-family: Georgia, 'Times New Roman', Times, serif;
+	min-height: 100vh;
+	max-width: 100vw;
 }
 
 .bordercol1{
@@ -36,7 +40,13 @@ body {
 	border-color: var(--col5);
 }
 
+#linkedin{
+	background-color: #3E6990;
+	text-decoration: none;
+	color: white;
 
+
+}
 
 .vp {
 	margin: 1rem;
@@ -273,8 +283,8 @@ footer {
 	}
 	main{
 		display: grid;
-		grid-template-columns: 1fr 1fr 2fr ;
-		grid-template-rows:  2fr 2fr 2fr 2fr;
+		grid-template-columns: auto auto auto;
+		grid-template-rows:  auto auto auto auto;
 		grid-template-areas:
 							'profil experience experience'	
 							'profil experience experience'
