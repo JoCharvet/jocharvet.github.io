@@ -23,6 +23,18 @@ a, address, #profil > p{
     font-size: 2rem;
     padding: 1rem;
 }
+a{
+    color: var(--col1);
+    text-decoration: none;
+}
+#linkedin{
+    background-color: #3E6990;
+    text-decoration: none;
+    color: white;
+}
+#linkedin:hover{
+    background-color: #AABD8C;
+}
 main h1{
     color: var(--col1);
 

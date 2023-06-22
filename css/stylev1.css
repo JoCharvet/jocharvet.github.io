@@ -40,13 +40,6 @@ body {
 	border-color: var(--col5);
 }
 
-#linkedin{
-	background-color: #3E6990;
-	text-decoration: none;
-	color: white;
-
-
-}
 
 .vp {
 	margin: 1rem;
@@ -149,7 +142,6 @@ article {
 #profil>h2,
 #profil h3,
 #profil address,
-#profil>a,
 #profil p {
 	color: var(--col1);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -259,6 +251,22 @@ footer {
 
 .appears{
 	display: none;
+}
+
+
+#linkedin{
+	background-color: #3E6990;
+	text-decoration: none;
+	font-style: inherit;
+	color: white;
+	border-radius: 50%;
+	padding: -5px 0;
+
+
+}
+#linkedin:link ,#linkedin:visited{
+	color: white;
+
 }
 
 @media screen and (min-width: 600px){
